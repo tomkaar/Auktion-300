@@ -47,6 +47,6 @@ var testData = {
 
 
 
-testApi.fetch();
+// testApi.fetch();
 // testApi.post(testData);
 // testApi.delete(70);
