@@ -22,10 +22,13 @@ var bud = ( function(){
     getBids: publicGetBids,
     newBid: publicNewBid
   }
+
 })();
 
 
 
+// bud.getBids(AuktionID);
+// bud.newBid(AuktionID, Price);
 
 // bud.getBids(3);
-// bud.newBid(3, 4200);
+// bud.newBid(3, 150);
