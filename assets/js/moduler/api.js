@@ -15,7 +15,7 @@ var api = ( function(){
         'Content-Type': 'application/json'
       }
     }).then( function(data) {
-      console.log('Request success: ', 'bud lagt');
+      console.log('Request success:');
     });
   }
 
@@ -31,5 +31,5 @@ var api = ( function(){
 // to get stuff use
 // api.fetchData(url);
 
-// to post stuff user
+// to post stuff use
 // api.postData(url, data);
