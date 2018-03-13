@@ -6,8 +6,22 @@ var api = ( function(){
     return data;
   }
 
+  async function postData(url, data){
+    fetch(url,{
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    }).then( function(data) {
+      console.log('Request success: ', 'bud lagt');
+    });
+  }
+
   return{
-    fetchData: fetchData
+    fetchData: fetchData,
+    postData: postData
   }
 
 })();
@@ -16,3 +30,6 @@ var api = ( function(){
 
 // to get stuff use
 // api.fetchData(url);
+
+// to post stuff user
+// api.postData(url, data);
