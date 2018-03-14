@@ -11,6 +11,12 @@
 	<title>Auktion-300</title>
 
 	<!-- <script src="assets/js/moduler/testapi.js" defer></script> -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+
 	<script src="assets/js/moduler/api.js" defer></script>
 
 	<script src="assets/js/moduler/bud.js" defer></script>
@@ -30,6 +36,26 @@
 		<a href="#Sport/Fritid">Sport/Fritid</a>
 		<input type="text" placeholder="Sök..">
 	</div>
+	
+
+	<h1>Auktions Grupp 300</h1>
+<p></p>
+<div id="data"></div>
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>AuktionID</th>
+                <th>Titel</th>
+                <th>Beskrivning</th>
+                <th>StartDatum</th>
+                <th>SlutDatum</th>
+				<th>Gruppkod</th>
+                <th>Utropspris</th>
+				<th>Status</th>
+            </tr>
+        </thead>
+	</table>
+	
 	<div id="content" class="content">
 	</div>
 </body>
