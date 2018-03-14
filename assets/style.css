@@ -338,6 +338,18 @@ html, body {
     margin-right: 16px;
     font-size: 17px; }
 
+input {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1em;
+  border: 0.063rem dotted black;
+  background-color: white; }
+
 @media screen and (max-width: 600px) {
   .nav-bar a {
     float: none;
