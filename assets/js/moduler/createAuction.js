@@ -10,7 +10,7 @@ let data =  { "AuktionID": 30,
 "Utropspris": Utropspris,
 "Startdatum": Startdatum,
 "Slutdatum": Slutdatum,
-"Gruppkod": 300}
+"Gruppkod": 300};
 let url = "http://nackowskis.azurewebsites.net/api/auktion/300";
 console.log(Titel + Beskrivning + Utropspris + Startdatum + Slutdatum);
 console.log(data);
