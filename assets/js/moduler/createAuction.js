@@ -6,12 +6,12 @@ function createAuction() {
   let Slutdatum = document.getElementById('Slutdatum').value;
   console.log(Titel + Beskrivning + Utropspris + Startdatum + Slutdatum);
 }
-var Skapaauktion = document.getElementById("Skapaauktion");
-Skapaauktion.addEventListener("click",createAuction);
+// var Skapaauktion = document.getElementById("Skapaauktion");
+// Skapaauktion.addEventListener("click",createAuction);
 
-function sendData () {
+// function sendData () {
 
-}
+// }
 
 /*
 Titel
