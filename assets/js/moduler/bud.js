@@ -3,7 +3,7 @@ var bud = ( function(){
   async function publicGetBids(AuktionID){
     let url = "http://nackowskis.azurewebsites.net/api/bud/300/" + AuktionID;
     let promise = await api.fetchData(url);
-    console.log(promise);
+    return promise;
   }
 
   // compare highest bid and users bid
