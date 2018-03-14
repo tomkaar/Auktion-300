@@ -12,10 +12,16 @@ let data =  { "AuktionID": 30,
 "Slutdatum": Slutdatum,
 "Gruppkod": 300};
 let url = "http://nackowskis.azurewebsites.net/api/auktion/300";
-  console.log(Titel + Beskrivning + Utropspris + Startdatum + Slutdatum);
-  console.log(data);
-  console.log(url);
-api.postData(url,data);
+console.log(Titel + Beskrivning + Utropspris + Startdatum + Slutdatum);
+console.log(data);
+console.log(url);
+
+if(Titel == "" || Beskrivning == "" || Utropspris == "" || Startdatum == "" || Slutdatum == "") {
+  alert("Fyll i alla fält");
+} else {
+  api.postData(url,data);
+ alert("Ny auktion skapad")
+}
 }
 
 var Skapaauktion = document.getElementById("Skapaauktion");
