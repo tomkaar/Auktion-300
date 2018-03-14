@@ -45,14 +45,17 @@ html, body{
   }
 }
 
-input {
+.form {
+  margin-left: 500px;
+  padding-top: 40px;
+  #Titel,#Beskrivning, #Utropspris, #Startdatum, #Slutdatum {
 			width: 20%;
-      display:flex;
-      justify-content: center;
-			padding: 1em;
-			border: 0.063rem dotted black;
-      background-color: white;
+			padding: 0.3em;
+      margin-bottom: 0.5rem;
+			border:outline black;
+      background-color: #e9e9e9;;
 		}
+  }
 
 @media screen and (max-width: 600px) {
   .nav-bar {
