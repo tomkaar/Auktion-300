@@ -10,17 +10,6 @@
 
 	<title>Auktion-300</title>
 
-	<!-- <script src="assets/js/moduler/testapi.js" defer></script> -->
-	
-	<!-- Det här pluginet kräver jqueryfunktioner som keyup, keydown, load page och etc!-->
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-
-	<!-- Denna plugin hjälper till att skapa data och implementerar filter!-->
-	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-	
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-
-
 	<script src="assets/js/moduler/api.js" defer></script>
 
 	<script src="assets/js/moduler/bud.js" defer></script>
@@ -32,36 +21,20 @@
 </head>
 
 <body>
-	<div class="nav-bar">
-		<a class="active" href="index.html">Home</a>
-		<a href="#Mode">Mode</a>
-		<a href="#Hem">Hem/Design</a>
-		<a href="#Elektronik">Elektronik</a>
-		<a href="#Sport/Fritid">Sport/Fritid</a>
-		<input type="text" placeholder="Sök..">
-	</div>
-	
 
-	<h1>Auktions Grupp 300</h1>
-<p></p>
-<div id="data"></div>
-<table id="example" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>AuktionID</th>
-                <th>Titel</th>
-                <th>Beskrivning</th>
-                <th>StartDatum</th>
-                <th>SlutDatum</th>
-				<th>Gruppkod</th>
-                <th>Utropspris</th>
-				<th>Status</th>
-            </tr>
-        </thead>
-	</table>
-	
-	<div id="content" class="content">
+	<div class="Field Field--is-search">
+		<input type="search" id="sok"="Sök här..." class="searchBox-query">
+		<button class="Btn SearchBox-submitBtn" type="submit" id="click" name="button">Sök</button>
+		<select class="select" id="filterSelect">
+			<option value="UtropsPris">Utrops pris</option>
+			<option value="SlutDatum">Slutdatum</option>
+			<option value="SlutDatum">Titel</option>
+
+		</select>
 	</div>
+
+	<div id="content" class="content"></div>
+
 </body>
 
 </html>
