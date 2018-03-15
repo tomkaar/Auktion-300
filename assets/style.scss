@@ -13,12 +13,13 @@ html {
 body {
 	font: 100% Lato, Helvetica, sans-serif;
 	
-	width: 80%;
+	width: 40%;
 	margin: 0 auto;
 	padding: 2%;
 	line-height: 1.6;
 }
- 
+
+
  input,
  button,
  .SearchBox:before {
@@ -27,11 +28,13 @@ body {
    font-size: 1.1rem;
    text-decoration: none;
    outline: none;
+  
  }
  
  
  .Field {
    display: flex;
+   padding-top: 10%;
  }
  
  .SearchBox-query {
@@ -81,7 +84,7 @@ body {
  
  .SearchBox-submitBtn {
    border-radius: 0 2px 2px 0;
-   background: rgb(23, 23, 26);
+   background: #2196F3;
    font-weight: 300;
    text-transform: uppercase;
    color: #EDFFEC;
@@ -89,8 +92,4 @@ body {
 
  .select {
    outline: none;
-
-<<<<<<< HEAD
  }
-=======
->>>>>>> 7d3d3af2b138a406e9c686a179a7c241360b9626
