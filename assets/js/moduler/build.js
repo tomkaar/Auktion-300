@@ -27,34 +27,44 @@ async function buildData(data) {
     // console.log(higherBid);
 
     let auctionsId = data[i].AuktionID;
-
-
-
     let container = document.createElement('div');
 
     let title = document.createElement('h3');
     title.textContent = data[i].Titel;
-
+    title.setAttribute('class', 'title')
+    
     let description = document.createElement('p');
     description.textContent = data[i].Beskrivning
-
+    description.setAttribute('class', 'description');
+    
     let startDate = document.createElement('p');
     startDate.textContent = "Start datum"+ " " + data[i].StartDatum;
-
+    startDate.setAttribute('class', 'startDate')
     let endDate = document.createElement('p');
     endDate.textContent = "Slut datum"+ " " +  data[i].SlutDatum;
-
+    endDate.setAttribute('class', 'endDate')
+    
+    
     let startPrice = document.createElement('h3');
+    startPrice.textContent = data[i].Utropspris + ';- sek';
+    startPrice.setAttribute('class', 'startPrice')
+    
     let currentBid = document.createElement('p');
     currentBid.textContent = higherBid + ";-" + " sek";
+    currentBid.setAttribute('class', 'currentBid');
+    
     let currentHighest = document.createElement('p');
     currentHighest.textContent = "Nuvarande högsta bud";
-    startPrice.textContent = data[i].Utropspris + ';- sek';
-    var bidButton = document.createElement('button');
-    // console.log(bidButton);
+    currentHighest.setAttribute('class', 'currentHighest');
+    
+    let bidButton = document.createElement('button');
+    bidButton.textContent = "Placera bud";
+    bidButton.setAttribute('class', 'bidButton');
+    
     let inputBid = document.createElement('input');
     inputBid.setAttribute('type', 'number');
     inputBid.setAttribute('pattern', '^[0-9]+$');
+    inputBid.setAttribute('class', 'inputBid');
 
 
 
