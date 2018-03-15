@@ -7,11 +7,14 @@ async function buildData(data) {
 
     var numberInArr = data.length;
     for(let i = 0; i < numberInArr; i++){
-    // console.log(data[i]);
-    //Get bids
+    let today = new Date();
+   
+    let newDate = new Date(data[i].SlutDatum);
+    
+    let dateDiff = newDate-today;
+   
     let bid = await bud.getBids(data[i].AuktionID)
-    // console.log(bid);
-    //Sort bids
+    
     let higherBid;
     if(bid == 0){
 
@@ -23,8 +26,6 @@ async function buildData(data) {
 
         higherBid = number[0].Summa;
     };
-
-    // console.log(higherBid);
 
     let auctionsId = data[i].AuktionID;
     let container = document.createElement('div');
@@ -57,6 +58,7 @@ async function buildData(data) {
     currentHighest.textContent = "Nuvarande högsta bud";
     currentHighest.setAttribute('class', 'currentHighest');
     
+
     let bidButton = document.createElement('button');
     bidButton.textContent = "Placera bud";
     bidButton.setAttribute('class', 'bidButton');
@@ -65,8 +67,6 @@ async function buildData(data) {
     inputBid.setAttribute('type', 'number');
     inputBid.setAttribute('pattern', '^[0-9]+$');
     inputBid.setAttribute('class', 'inputBid');
-
-
 
     bidButton.textContent = "Placera bud";
     // console.log(bidButton);
@@ -120,8 +120,16 @@ async function buildData(data) {
     content.appendChild(currentBid);
     content.appendChild(startDate);
     content.appendChild(endDate);
-    content.appendChild(bidButton);
-    content.appendChild(inputBid);
+    
+    if(dateDiff >= 0){
+
+        content.appendChild(bidButton);
+        content.appendChild(inputBid);
+    } else{
+        let expiredAuction = document.createElement('h4');
+        expiredAuction.textContent = "Utgången vara";
+        content.appendChild(expiredAuction);
+    }
 
     content.appendChild(container);
 
