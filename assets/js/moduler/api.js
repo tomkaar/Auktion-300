@@ -1,12 +1,12 @@
 var api = ( function(){
 
-  async function fetchData(url){
+  async function publicFetchData(url){
     var promise = await fetch(url);
     var data = await promise.json();
     return data;
   }
 
-  async function postData(url, data){
+  async function publicPostData(url, data){
     fetch(url,{
       method: 'POST',
       body: JSON.stringify(data),
@@ -19,9 +19,18 @@ var api = ( function(){
     });
   }
 
+  async function publicDeleteData(url){
+    fetch(url,{
+      method: 'DELETE'
+    }).then( function(data) {
+      console.log('Deleted!');
+    });
+  }
+
   return{
-    fetchData: fetchData,
-    postData: postData
+    fetchData: publicFetchData,
+    postData: publicPostData,
+    deleteData: publicDeleteData
   }
 
 })();
@@ -33,3 +42,6 @@ var api = ( function(){
 
 // to post stuff use
 // api.postData(url, data);
+
+// to delete stuff
+// api.deleteData(url);

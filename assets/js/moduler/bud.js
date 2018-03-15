@@ -6,8 +6,6 @@ var bud = ( function(){
     return promise;
   }
 
-  // compare highest bid and users bid
-  // only post if users bid is higher then the current highest bid.
   async function publicNewBid(AuktionID, hogstaBud, summa){
 
     if(summa <= hogstaBud){
@@ -28,12 +26,17 @@ var bud = ( function(){
       return true;
     }
 
+  }
 
+  async function publicRemoveBid(BudId){
+    let url = "http://nackowskis.azurewebsites.net/api/bud/300/" + BudId;
+    api.deleteData(url);
   }
 
   return{
     getBids: publicGetBids,
-    newBid: publicNewBid
+    newBid: publicNewBid,
+    removeBid: publicRemoveBid
   }
 
 })();
@@ -43,5 +46,8 @@ var bud = ( function(){
 // bud.getBids(AuktionID);
 // bud.newBid(AuktionID, Price);
 
-// bud.getBids(3);
+// bud.newBids(AuktionID, hogstaBud, Summa);
 // bud.newBid(3, 150, 149);
+
+// bud.removeBid(budID);
+// bud.removeBid(82);
