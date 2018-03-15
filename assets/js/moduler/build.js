@@ -63,23 +63,44 @@ async function buildData(data) {
         bidButton.addEventListener("click", function(e){
           let currentInputBid = inputBid.value
           if(currentInputBid == ""){
-            // console.log("freakin empty");
+            alert("Du måste ange ett bud");
         }
         else {
 
-            if(currentInputBid >= higherBid){
+            if(currentInputBid > higherBid){
                 bud.newBid(auctionsId, higherBid, currentInputBid)
-                console.log("")
+                alert("Ditt bud är registrerat")
             }
 
             else {
-                // console.log("Cheap ass");
-            }
+               alert("Ditt bud är för lågt")
+            } 
 
         }
+  
         });
-
-
+       inputBid.addEventListener('keydown', function (keyDown){
+            let name = keyDown.keyCode 
+            if(name == 13){
+                let currentInputBid = inputBid.value
+                if(currentInputBid == ""){
+                  alert("Du måste ange ett bud");
+              }
+              else {
+      
+                  if(currentInputBid > higherBid){
+                      bud.newBid(auctionsId, higherBid, currentInputBid)
+                      alert("Ditt bud är registrerat")
+                  }
+      
+                  else {
+                     alert("Ditt bud är för lågt")
+                  } 
+      
+              }
+        
+            }
+        });
 
     content.appendChild(title);
     content.appendChild(description);
@@ -103,4 +124,4 @@ async function buildData(data) {
 
 }
 
- buildData()
+

@@ -11,11 +11,25 @@ async function search () {
 
 	if(selected =='UtropsPris'){
 		var sort = filter.sort((a,b)=>a.Utropspris > b.Utropspris);
-	} else {
+	} 
+	else {
 			var sort = filter.sort((a,b)=>a.SlutDatum > b.SlutDatum);
+	}
+	
+	if (selected == "Titel"){
+		var sort = filter.sort((a,b)=>a.Titel > b.Titel);
 	}
 
 	buildData(sort);
 
 }
 document.getElementById('click').addEventListener('click', search);
+
+document.getElementById('sok').addEventListener('keydown', function (keyDown){
+	let name = keyDown.keyCode 
+	if(name == 13){
+		search();
+	}
+});
+
+search();
