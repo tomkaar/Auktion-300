@@ -36,6 +36,9 @@ var api = ( function(){
 })();
 
 
+//
+// How to use it
+//
 
 // to get stuff use
 // api.fetchData(url);

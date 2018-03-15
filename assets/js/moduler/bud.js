@@ -42,6 +42,9 @@ var bud = ( function(){
 })();
 
 
+//
+// How to use it
+//
 
 // bud.getBids(AuktionID);
 // bud.newBid(AuktionID, Price);
