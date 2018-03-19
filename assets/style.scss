@@ -19,46 +19,45 @@ body {
 	line-height: 1.6;
 }
 
-
+.heading {
+  background-color: #2196F3;
+  height: 6rem;
+}
+.heading-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  
+}
+.names {
+  margin-top: -2rem;
+  text-align: center;
+}
  input,
  button,
  .SearchBox:before {
    padding: .35em .75em;
    border: none;
-   font-size: 1.1rem;
+   font-size: 1.4rem;
    text-decoration: none;
    outline: none;
   
  }
  
- 
  .Field {
    display: flex;
    padding-top: 10%;
- }
- 
- .SearchBox-query {
-   flex: 1 0 8em;
- }
- 
- .SearchBox-submitBtn {
-  
-   flex: 0 0 auto;
+   justify-content: center;
+   
  }
  
  .Field--is-search:before {
-
    flex: 0 0 2.75em;
    display: inline-flex;
    align-items: center;
    justify-content: center;
  }
- 
- .SearchBox {
-   margin: 3rem auto 0;
-   max-width: 80%;
- }
- 
+
  .Field--is-search:before {
    border-radius: 2px 0 0 2px;
    background: #ccc;
@@ -71,17 +70,6 @@ body {
    content: "\f002";
  }
  
- .SearchBox-query {
-   background: #e9e9e9;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
- }
- 
- .SearchBox-query:focus {
-   background: white;
- }
- 
  .SearchBox-submitBtn {
    border-radius: 0 2px 2px 0;
    background: #2196F3;
@@ -92,4 +80,5 @@ body {
 
  .select {
    outline: none;
+   
  }

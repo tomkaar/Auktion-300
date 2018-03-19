@@ -19,8 +19,11 @@ var testApi = ( function(){
     });
   }
 
-  async function publicTestDelete(number){
-    fetch("http://nackowskis.azurewebsites.net/api/Auktion/300/" + number, { method: 'DELETE'} ).then( function(){
+  async function publicTestDelete(url){
+    fetch(url, {
+      method: 'DELETE'
+    })
+    .then( function(){
       console.log("DELETED!");
     });
   }
@@ -46,7 +49,15 @@ var testData = {
 }
 
 
+//
+// How to use
+//
 
-// testApi.fetch();
-// testApi.post(testData);
-// testApi.delete(70);
+// Get data
+// testApi.fetch(URL);
+
+// Post Data
+// testApi.post(URL, Data(JSON);
+
+// Delete Data
+// testApi.delete(URL);
