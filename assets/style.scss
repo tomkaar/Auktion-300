@@ -32,23 +32,25 @@ body {
 .names {
   margin-top: -2rem;
   text-align: center;
+  font-size: .8rem;
 }
  input,
  button,
  .SearchBox:before {
    padding: .35em .75em;
    border: none;
-   font-size: 1.4rem;
+   font-size: 1.3rem;
    text-decoration: none;
    outline: none;
   
  }
- 
+
  .Field {
    display: flex;
    padding-top: 10%;
    justify-content: center;
    
+  
  }
  
  .Field--is-search:before {
@@ -56,12 +58,12 @@ body {
    display: inline-flex;
    align-items: center;
    justify-content: center;
+   
  }
 
  .Field--is-search:before {
    border-radius: 2px 0 0 2px;
    background: #ccc;
-   
    font-family: 'FontAwesome';
    font-weight: normal;
    font-style: normal;
@@ -76,6 +78,7 @@ body {
    font-weight: 300;
    text-transform: uppercase;
    color: #EDFFEC;
+   width: 4rem;
  }
 
  .select {
