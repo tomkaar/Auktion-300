@@ -15,7 +15,6 @@ function createAuction() {
     "Startdatum": Startdatum,
     "Slutdatum": Slutdatum,
     "Gruppkod": 300
-    
   };
 
   // set url
