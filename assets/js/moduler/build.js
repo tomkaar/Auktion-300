@@ -29,6 +29,7 @@ async function buildData(data) {
     // Create elements to print everytihng on screen
     let auctionsId = data[i].AuktionID;
     let container = document.createElement('div');
+    container.setAttribute("class", "item");
 
     let title = document.createElement('h3');
     title.textContent = data[i].Titel;
@@ -38,11 +39,15 @@ async function buildData(data) {
     description.textContent = data[i].Beskrivning
     description.setAttribute('class', 'description');
 
+
+    let startTid = new Date(data[i].StartDatum).toString().split(' ');
+    let slutTid = new Date(data[i].SlutDatum).toString().split(' ');
+
     let startDate = document.createElement('p');
-    startDate.textContent = "Start datum"+ " " + data[i].StartDatum;
+    startDate.innerHTML = "<strong>Start datum:</strong>"+ " " + startTid[0] + " " + startTid[2] + " " + startTid[1];
     startDate.setAttribute('class', 'startDate')
     let endDate = document.createElement('p');
-    endDate.textContent = "Slut datum"+ " " +  data[i].SlutDatum;
+    endDate.innerHTML = "<strong>Slut datum:</strong>"+ " " + slutTid[0] + " " + slutTid[2] + " " + slutTid[1];
     endDate.setAttribute('class', 'endDate')
 
 
@@ -50,7 +55,7 @@ async function buildData(data) {
     startPrice.textContent = data[i].Utropspris + ';- sek';
     startPrice.setAttribute('class', 'startPrice')
 
-    let currentBid = document.createElement('p');
+    let currentBid = document.createElement('h3');
     currentBid.textContent = higherBid + ";-" + " sek";
     currentBid.setAttribute('class', 'currentBid');
 
@@ -67,6 +72,7 @@ async function buildData(data) {
     inputBid.setAttribute('type', 'number');
     inputBid.setAttribute('pattern', '^[0-9]+$');
     inputBid.setAttribute('class', 'inputBid');
+    inputBid.setAttribute('placeholder', 'Bud...');
 
     // when click on bid button
     bidButton.addEventListener("click", function(e){
@@ -106,23 +112,24 @@ async function buildData(data) {
     }); // end addEventListener
 
     // append everything to content div inside HTML document
-    content.appendChild(title);
-    content.appendChild(description);
-    content.appendChild(startPrice);
-    content.appendChild(currentBid);
-    content.appendChild(currentHighest);
-    content.appendChild(currentBid);
-    content.appendChild(startDate);
-    content.appendChild(endDate);
+    container.appendChild(title);
+    container.appendChild(description);
+    container.appendChild(startPrice);
+    container.appendChild(currentBid);
+    container.appendChild(currentHighest);
+    container.appendChild(currentBid);
+    container.appendChild(startDate);
+    container.appendChild(endDate);
 
     // if auction item is still open -> print, else -> tell the user that the auction is closed
     if(dateDiff >= 0){
-      content.appendChild(bidButton);
-      content.appendChild(inputBid);
+      container.appendChild(bidButton);
+      container.appendChild(inputBid);
     } else{
       let expiredAuction = document.createElement('h4');
       expiredAuction.textContent = "Utgången vara";
-      content.appendChild(expiredAuction);
+      container.appendChild(expiredAuction);
+      expiredAuction.setAttribute("class", "expire");
     }
 
     // append created container to content in HTML document

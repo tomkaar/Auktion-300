@@ -1,38 +1,43 @@
- @import 'normalize';
+ // @import 'normalize';
 
  /*basic styles*/
  @import url(//fonts.googleapis.com/css?family=Roboto:400,300);
  @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
- 
- html, body {
+
+ @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+
+*, *:before, *:after {
 	margin: 0;
+  padding: 0;
 }
-html {
-	background: rgb(185, 187, 185);
-}
+
 body {
 	font: 100% Lato, Helvetica, sans-serif;
-	
-	width: 40%;
 	margin: 0 auto;
-	padding: 2%;
 	line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .heading {
-  background-color: #2196F3;
+  position: relative;
+  background-color: lightseagreen;
   height: 6rem;
+  padding: 20px 0;
 }
-.heading-title {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  text-align: center;
-  
-}
-.names {
-  margin-top: -2rem;
-  text-align: center;
-  font-size: .8rem;
+  .heading-title {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .names {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+.content{
+  width: 100%;
+  margin: 0 auto;
 }
  input,
  button,
@@ -42,46 +47,107 @@ body {
    font-size: 1.3rem;
    text-decoration: none;
    outline: none;
-  
  }
 
  .Field {
    display: flex;
-   padding-top: 10%;
+   padding-top: 10px;
+   margin: 50px 0;
    justify-content: center;
-   
-  
- }
- 
- .Field--is-search:before {
-   flex: 0 0 2.75em;
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   
  }
 
- .Field--is-search:before {
-   border-radius: 2px 0 0 2px;
-   background: #ccc;
-   font-family: 'FontAwesome';
-   font-weight: normal;
-   font-style: normal;
-   color: #797979;
-   
-   content: "\f002";
- }
- 
  .SearchBox-submitBtn {
-   border-radius: 0 2px 2px 0;
-   background: #2196F3;
+   background: lightseagreen;
    font-weight: 300;
    text-transform: uppercase;
    color: #EDFFEC;
-   width: 4rem;
  }
 
  .select {
    outline: none;
-   
+
  }
+
+ .search-box{
+
+   input{
+     height: 39px;
+     border: 1px solid grey;
+     border-radius: 5px;
+   }
+
+   .select{
+     appearance: none;
+     padding: 0 10px;
+     margin: 0 10px;
+     height: 39px;
+     background: white;
+     border: 1px solid grey;
+     border-radius: 5px;
+     font-size: 1.3rem;
+   }
+
+   button{
+     border-radius: 5px;
+   }
+ }
+
+
+
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.item{
+  min-width: 31.3333%;
+  width: 31.33333%;
+  margin: 50px 1%;
+
+  .title{
+    padding: 0 0 10px 0;
+    line-height: 1;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    color: #565656;
+  }
+
+  .description{
+    color: #333333;
+  }
+
+  button{
+    margin: 10px 0 0 0;
+    box-sizing: border-box;
+    width: 50%;
+    cursor: pointer;
+    color: white;
+    border: 1px solid lightseagreen;
+    background: lightseagreen;
+    border-right: 0;
+
+    &:hover{
+      color: white;
+      background: lightseagreen;
+    }
+  }
+
+  input{
+    margin: 10px 0 0 0;
+    box-sizing: border-box;
+    width: 50%;
+    border: 1px solid lightseagreen;
+  }
+
+  .expire{
+    margin: 10px 0 0 0;
+    padding: 3px 0;
+    width: 100%;
+    background: lightseagreen;
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+  }
+}

@@ -12,16 +12,17 @@ async function search () {
 	// Sort data
 	if(selected =='UtropsPris'){
 		var sort = filter.sort((a,b)=>a.Utropspris > b.Utropspris);
-	} else {
+	}
+	else if (selected == 'SlutDatum') {
 		var sort = filter.sort((a,b)=>a.SlutDatum > b.SlutDatum);
 	}
-	if (selected == "Titel"){
+	else{
 		var sort = filter.sort((a,b)=>a.Titel > b.Titel);
 	}
 
 	// send filtered and sorted data to buildData function that "prints" the data on screen
 	buildData(sort);
-} // end search function 
+} // end search function
 
 // Run function on start
 search();

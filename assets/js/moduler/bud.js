@@ -53,4 +53,4 @@ var bud = ( function(){
 // bud.newBid(3, 150, 149);
 
 // bud.removeBid(budID);
-// bud.removeBid(82);
+// bud.removeBid(596);
