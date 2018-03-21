@@ -23,6 +23,7 @@ var api = ( function(){
     fetch(url,{
       method: 'DELETE'
     }).then( function(data) {
+      
       console.log('Deleted!');
     });
   }
@@ -36,9 +37,6 @@ var api = ( function(){
 })();
 
 
-//
-// How to use it
-//
 
 // to get stuff use
 // api.fetchData(url);

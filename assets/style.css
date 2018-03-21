@@ -317,6 +317,15 @@ body {
   padding: 2%;
   line-height: 1.6; }
 
+.form input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 10px; }
+
 .heading {
   background-color: #2196F3;
   height: 6rem; }
