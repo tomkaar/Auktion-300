@@ -21,7 +21,7 @@ function createAuction() {
   let url = "http://nackowskis.azurewebsites.net/api/auktion/300";
 
   // if all fields are filled, tell the user to do that
-  // else post the data using the api.postData from api.js file 
+  // else post the data using the api.postData from api.js file
   if(Titel == "" || Beskrivning == "" || Utropspris == "" || Startdatum == "" || Slutdatum == "") {
     alert("Fyll i alla fält");
   } else {

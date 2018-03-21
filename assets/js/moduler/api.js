@@ -23,7 +23,7 @@ var api = ( function(){
     fetch(url,{
       method: 'DELETE'
     }).then( function(data) {
-      
+
       console.log('Deleted!');
     });
   }

@@ -1,9 +1,6 @@
  // @import 'normalize';
 
  /*basic styles*/
- @import url(//fonts.googleapis.com/css?family=Roboto:400,300);
- @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
  @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
 
 *, *:before, *:after {
@@ -37,9 +34,10 @@ button#Skapaauktion{
 
 .heading {
   position: relative;
+  color: white;
   background-color: lightseagreen;
   height: 6rem;
-  padding: 20px 0;
+  padding: 100px 0;
 }
   .heading-title {
     margin: 0;
@@ -162,7 +160,7 @@ button#Skapaauktion{
     margin: 10px 0 0 0;
     padding: 3px 0;
     width: 100%;
-    background: lightseagreen;
+    background: grey;
     font-size: 1.3rem;
     color: white;
     text-align: center;

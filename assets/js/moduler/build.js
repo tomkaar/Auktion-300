@@ -44,24 +44,25 @@ async function buildData(data) {
     let slutTid = new Date(data[i].SlutDatum).toString().split(' ');
 
     let startDate = document.createElement('p');
-    startDate.innerHTML = "<strong>Start datum:</strong>"+ " " + startTid[0] + " " + startTid[2] + " " + startTid[1];
+    startDate.innerHTML = "<strong>Start datum:</strong>"+ " " + startTid[0] + " " + startTid[2] + " " + startTid[1] + " " + startTid[3];
     startDate.setAttribute('class', 'startDate')
+
     let endDate = document.createElement('p');
-    endDate.innerHTML = "<strong>Slut datum:</strong>"+ " " + slutTid[0] + " " + slutTid[2] + " " + slutTid[1];
+    endDate.innerHTML = "<strong>Slut datum:</strong>"+ " " + slutTid[0] + " " + slutTid[2] + " " + slutTid[1] + " " + startTid[3];
     endDate.setAttribute('class', 'endDate')
 
 
     let startPrice = document.createElement('h3');
     startPrice.textContent = data[i].Utropspris + ';- sek';
-    startPrice.setAttribute('class', 'startPrice')
-
-    let currentBid = document.createElement('h3');
-    currentBid.textContent = higherBid + ";-" + " sek";
-    currentBid.setAttribute('class', 'currentBid');
+    startPrice.setAttribute('class', 'startPrice');
 
     let currentHighest = document.createElement('p');
     currentHighest.textContent = "Nuvarande högsta bud";
     currentHighest.setAttribute('class', 'currentHighest');
+
+    let currentBid = document.createElement('h3');
+    currentBid.textContent = higherBid + ";-" + " sek";
+    currentBid.setAttribute('class', 'currentBid');
 
 
     let bidButton = document.createElement('button');
