@@ -18,6 +18,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.form input {
+  display:flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .heading {
   position: relative;
   background-color: lightseagreen;
